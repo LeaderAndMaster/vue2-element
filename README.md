@@ -20,8 +20,8 @@
 ## 项目截图
 
 <div align=center>
-	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo1.jpg" width="40%">
-	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo2.jpg" width="40%">
+	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo1.jpeg" width="40%">
+	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo2.jpeg" width="40%">
 </div>
 
 ##	要是能给作者买杯咖啡就更好了（谢谢^-^）
