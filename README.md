@@ -19,11 +19,12 @@
 
 ## 项目截图
 
-<div align=center><img src="https://static.oschina.net/uploads/space/2017/0207/110250_3uWi_2493500.jpeg" width="40%"></div>
+<div align=center>
+	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo1.jpg" width="40%">
+	<img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/demo2.jpg" width="40%">
+</div>
 
-<div align=center><img src="https://static.oschina.net/uploads/space/2017/0207/110759_xva1_2493500.jpeg" width="40%"></div>
-
-##	给作者买杯咖啡（谢谢^-^）
+##	要是能给作者买杯咖啡就更好了（谢谢^-^）
 
 <div align=center><img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/code.png" width="40%"></div>
 
