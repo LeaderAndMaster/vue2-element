@@ -23,6 +23,9 @@
 
 <div align=center><img src="https://static.oschina.net/uploads/space/2017/0207/110759_xva1_2493500.jpeg" width="40%"></div>
 
+##	给作者买杯咖啡（谢谢^-^）
+
+<div align=center><img src="https://github.com/LeaderAndMaster/vue2-element/blob/master/static/img/code.png" width="40%"></div>
 
 ## 安装步骤
 
