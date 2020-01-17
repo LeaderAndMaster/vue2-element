@@ -221,10 +221,10 @@ export default {
     }
   },
   created() {
-    this._init()
+    this.init()
   },
   methods: {
-    _init() {
+    init() {
       axios.get('static/data.json').then((res) => {
         this.seller = res.data.seller
         this.$nextTick(() => {

@@ -24,7 +24,7 @@
             <span class="count">{{seller.supports.length+'个'}}</span>
             <i class="icon-keyboard_arrow_right"></i>
         </div>
-  </div>
+    </div>
     <div class="bulletin-wrapper" @click="showDetails()">
       <span class="bulletin-title"></span>
       <span class="bulletin-text">{{seller.bulletin}}</span>
@@ -63,9 +63,8 @@
         <div class="detail-close">
           <i class="icon-close" @click="hideDetail()"></i>
         </div>
+      </div>
     </transition>
-
-    </div>
 </div>
 
 </template>
