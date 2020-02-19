@@ -37,7 +37,6 @@ const router = new VueRouter({
   }],
   linkActiveClass: 'active'
 })
-
 new Vue({
   router,
   store,
