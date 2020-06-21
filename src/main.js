@@ -5,25 +5,15 @@ import goods from 'components/goods/goods'
 import ratings from 'components/ratings/ratings'
 import seller from 'components/seller/seller'
 import vueTap from 'v-tap'
-import fastclick from 'fastclick'
 import Vuex from 'vuex'
+import router from "./router";
+import store from "./store";
+
 
 Vue.use(vueTap)
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  // 添加的商品元素
-  addCartEl: {},
-  mutations: {
-    increment(state) {
-      state.count++
-    }
-  }
-})
 const router = new VueRouter({
   routes: [{
     path: '/goods',

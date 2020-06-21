@@ -1,23 +1,3 @@
-<style lang="stylus" rel="stylesheet/stylus">
-  @import 'common/stylus/index'
-  .tab
-    display:flex
-    width:100%
-    height:40px
-    line-height:40px
-    border-1px(rgba(7,17,27,0.1))
-    .tab-item
-      flex:1
-      text-align:center
-      a
-        display:block
-        font-size:14px
-        color rgb(77,85,93)
-        &.active
-          font-size 14px
-          color rgb(240,20,20)
-</style>
-
 <template>
 <div>
   <v-header :seller="seller"></v-header>
@@ -60,5 +40,29 @@ export default {
     'v-header': header
   }
 }
-
 </script>
+
+<style lang="scss" >
+  // @import 'common/stylus/index'
+  .tab {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: -1px solid rgba(7,17,27,0.1);
+}
+.tab .tab-item {
+  flex: 1;
+  text-align: center;
+}
+.tab .tab-item a {
+  display: block;
+  font-size: 14px;
+  color: #4d555d;
+}
+.tab .tab-item a.active {
+  font-size: 14px;
+  color: #f01414;
+}
+
+</style>

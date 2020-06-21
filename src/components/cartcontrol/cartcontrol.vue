@@ -48,41 +48,59 @@ export default {
 
 </script>
 
-<style lang="stylus">
-
-.cartcontrol
-  .cart-decrease
-    display inline-block
-    padding 6px
-    transition: all .4s linear
-    .inner
-      line-height 24px
-      font-size 24px
-      color rgb(0,160,220)
-      transition all 0.4s linear
-    &.fadeRotate-enter-active, &.fadeRotate-leave-active
-      transform translate3d(0,0,0)
-      .inner
-        display inline-block
-        transform rotate(0)
-    &.fadeRotate-enter, &.fadeRotate-leave-active
-      opacity: 0
-      transform translate3d(24px,0,0)
-      .inner
-        transform rotate(180deg)
-  .cart-count
-    display inline-block
-    vertical-align top
-    font-size 10px
-    color rgb(147,153,159)
-    line-height 24px
-    text-align center
-    padding 6px 0
-  .cart-add
-    display inline-block
-    vertical-align top
-    font-size 24px
-    color rgb(0,160,220)
-    line-height 24px
-    padding 6px
+<style lang="scss">
+.cartcontrol {
+	.cart-decrease {
+		display: inline-block;
+		padding: 6px;
+		transition: all 0.4s linear;
+		.inner {
+			line-height: 24px;
+			font-size: 24px;
+			color: #00a0dc;
+			transition: all 0.4s linear;
+		}
+	}
+	.cart-decrease.fadeRotate-enter-active {
+		transform: translate3d(0, 0, 0);
+		.inner {
+			display: inline-block;
+			transform: rotate(0);
+		}
+	}
+	.cart-decrease.fadeRotate-leave-active {
+		transform: translate3d(0, 0, 0);
+		opacity: 0;
+		transform: translate3d(24px, 0, 0);
+		.inner {
+			display: inline-block;
+			transform: rotate(0);
+			transform: rotate(180deg);
+		}
+	}
+	.cart-decrease.fadeRotate-enter {
+		opacity: 0;
+		transform: translate3d(24px, 0, 0);
+		.inner {
+			transform: rotate(180deg);
+		}
+	}
+	.cart-count {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 10px;
+		color: #93999f;
+		line-height: 24px;
+		text-align: center;
+		padding: 6px 0;
+	}
+	.cart-add {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 24px;
+		color: #00a0dc;
+		line-height: 24px;
+		padding: 6px;
+	}
+}
 </style>

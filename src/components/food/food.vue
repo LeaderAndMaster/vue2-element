@@ -13,14 +13,16 @@ export default {
 
 </script>
 
-<style lang="stylus" scoped>
-.food
-  position fixed
-  left 0
-  top 0
-  right 0
-  bottom 48px
-  width 100%
-  background white
-  z-index 30
+<style lang="scss" scoped>
+.food {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 48px;
+  width: 100%;
+  background: #fff;
+  z-index: 30;
+}
+
 </style>

@@ -143,176 +143,225 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.detailWrapper
-  position fixed
-  left 0
-  top 0
-  bottom 48px
-  width 100%
-  background white
-  transition all 0.4s ease
-  &.move-enter-avtive,&.move-leave-active{
-    transform translate3d(0,0,0)
-  }
-  &.move-enter,&.move-leave-active{
-    transform translate3d(100%,0,0)
-  }
-.foodDetail
-  .back
-    position absolute
-    color white
-    top 12px
-    left 6px
-    font-size 20px
-    padding 10px
-  .info
-    position relative
-    box-sizing border-box
-    width 100%
-    padding 18px
-    .title
-      font-size 14px
-      font-weight 700
-      color rgb(7,17,27)
-      line-height 14px
-    .desc
-      display flex
-      padding 0
-      padding-top 8px
-      font-size 10px
-      color rgb(147,153,159)
-      line-height 10px
-      span:last-child
-        padding-left 12px
-    .price
-      display flex
-      padding-top 18px
-      font-size 14px
-      font-weight 700
-      color rgb(240,20,20)
-      line-height 24px
-      .unit
-        font-size 10px
-        font-weight normal
-      .oldPrice
-        padding-left 12px
-        font-size 10px
-        font-weight normal
-        color rgb(147,153,159)
-        line-height 24px
-    .shopCart
-      position absolute
-      right 18px
-      bottom 18px
-      height 24px
-      text-align center
-      z-index 2
-      .text
-        box-sizing border-box
-        height 100%
-        line-height 24px
-        color white
-        font-size 10px
-        padding 0 12px
-        border-radius 12px
-        background rgb(0,160,220)
-        &.fade-enter-active,&.fade-leave-active{
-          transition opacity .5s
-        }
-        &.fade-enter,&.fade-leave-active{
-          opacity 0
-        }
-    .cartcontrol
-      position absolute
-      right 12px
-      bottom 12px
-  .desc
-    padding 18px
-    .title
-      font-size 14px
-      font-weight 500
-      color #07111b
-      margin-bottom 6px
-    .content
-      font-size 12px
-      font-weight 200
-      color rgb(77,85,93)
-      line-height 24px
-      padding 0 8px
-  .evaluation
-    padding 18px 0
-    position relative
-    .title
-      padding-left 18px
-      font-size: 14px
-      font-weight 500
-      color: #07111b
-    .classify
-      padding 18px 0
-      margin 0 18px
-      border-bottom 1px solid rgba(7,17,27,0.1)
-      .item
-        display inline-block
-        font-size 12px
-        padding 8px 12px
-        line-height 16px
-        background rgba(0,160,220,0.2)
-        color rgb(77,85,95)
-        margin-right 8px
-        .count
-          font-size 8px
-          padding-left 2px
-        &.active
-          color white
-          background rgb(0,169,220)
-        &.bad
-          background rgba(77,85,93,0.2)
-        &.badActive
-          background #4d555d
-    .switch
-      font-size 12px
-      width 100%
-      padding 12px 0 12px 18px
-      color rgb(147,153,159)
-      border-bottom 1px solid rgba(7,17,27,0.1)
-      .icon-check_circle
-        font-size 24px
-        vertical-align middle
-        &.on
-          color #00c850
-    .evel-list
-      margin 0 18px
-      .evel
-        padding 16px 0
-        border-bottom 1px solid rgba(7,17,27,0.1)
-        .userInfo
-          display flex
-          color rgb(147,153,159)
-          font-size 10px
-          line-height 12px
-          .time
-            flex 1
-          .user
-            flex 1
-            text-align right
-            .avatar
-              img
-                padding-left 6px
-                border-radius 50%
-        .content
-          padding-top 6px
-          .icon
-            font-size 12px
-            line-height 24px
-            &.icon-thumb_up
-              color rgb(0,160,220)
-            &.icon-thumb_down
-              color rgb(147,153,159)
-          .text
-            font-size 12px
-            color rgb(7,17,27)
-            line-height 16px
-            padding-left 4px
+<style lang="scss" scoped>
+.detailWrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 48px;
+	width: 100%;
+	background: #fff;
+	transition: all 0.4s ease;
+}
+.detailWrapper.move-enter-avtive {
+	transform: translate3d(0, 0, 0);
+}
+.detailWrapper.move-leave-active {
+	transform: translate3d(0, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+.detailWrapper.move-enter {
+	transform: translate3d(100%, 0, 0);
+}
+.foodDetail {
+	.back {
+		position: absolute;
+		color: #fff;
+		top: 12px;
+		left: 6px;
+		font-size: 20px;
+		padding: 10px;
+	}
+	.info {
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 18px;
+		.title {
+			font-size: 14px;
+			font-weight: 700;
+			color: #07111b;
+			line-height: 14px;
+		}
+		.desc {
+			display: flex;
+			padding: 0;
+			padding-top: 8px;
+			font-size: 10px;
+			color: #93999f;
+			line-height: 10px;
+			span {
+				&:last-child {
+					padding-left: 12px;
+				}
+			}
+		}
+		.price {
+			display: flex;
+			padding-top: 18px;
+			font-size: 14px;
+			font-weight: 700;
+			color: #f01414;
+			line-height: 24px;
+			.unit {
+				font-size: 10px;
+				font-weight: normal;
+			}
+			.oldPrice {
+				padding-left: 12px;
+				font-size: 10px;
+				font-weight: normal;
+				color: #93999f;
+				line-height: 24px;
+			}
+		}
+		.shopCart {
+			position: absolute;
+			right: 18px;
+			bottom: 18px;
+			height: 24px;
+			text-align: center;
+			z-index: 2;
+			.text {
+				box-sizing: border-box;
+				height: 100%;
+				line-height: 24px;
+				color: #fff;
+				font-size: 10px;
+				padding: 0 12px;
+				border-radius: 12px;
+				background: #00a0dc;
+			}
+			.text.fade-enter-active {
+				transition: opacity 0.5s;
+			}
+			.text.fade-leave-active {
+				transition: opacity 0.5s;
+				opacity: 0;
+			}
+			.text.fade-enter {
+				opacity: 0;
+			}
+		}
+		.cartcontrol {
+			position: absolute;
+			right: 12px;
+			bottom: 12px;
+		}
+	}
+	.desc {
+		padding: 18px;
+		.title {
+			font-size: 14px;
+			font-weight: 500;
+			color: #07111b;
+			margin-bottom: 6px;
+		}
+		.content {
+			font-size: 12px;
+			font-weight: 200;
+			color: #4d555d;
+			line-height: 24px;
+			padding: 0 8px;
+		}
+	}
+	.evaluation {
+		padding: 18px 0;
+		position: relative;
+		.title {
+			padding-left: 18px;
+			font-size: 14px;
+			font-weight: 500;
+			color: #07111b;
+		}
+		.classify {
+			padding: 18px 0;
+			margin: 0 18px;
+			border-bottom: 1px solid rgba(7,17,27,0.1);
+			.item {
+				display: inline-block;
+				font-size: 12px;
+				padding: 8px 12px;
+				line-height: 16px;
+				background: rgba(0,160,220,0.2);
+				color: #4d555f;
+				margin-right: 8px;
+				.count {
+					font-size: 8px;
+					padding-left: 2px;
+				}
+			}
+			.item.active {
+				color: #fff;
+				background: #00a9dc;
+			}
+			.item.bad {
+				background: rgba(77,85,93,0.2);
+			}
+			.item.badActive {
+				background: #4d555d;
+			}
+		}
+		.switch {
+			font-size: 12px;
+			width: 100%;
+			padding: 12px 0 12px 18px;
+			color: #93999f;
+			border-bottom: 1px solid rgba(7,17,27,0.1);
+			.icon-check_circle {
+				font-size: 24px;
+				vertical-align: middle;
+			}
+			.icon-check_circle.on {
+				color: #00c850;
+			}
+		}
+		.evel-list {
+			margin: 0 18px;
+			.evel {
+				padding: 16px 0;
+				border-bottom: 1px solid rgba(7,17,27,0.1);
+				.userInfo {
+					display: flex;
+					color: #93999f;
+					font-size: 10px;
+					line-height: 12px;
+					.time {
+						flex: 1;
+					}
+					.user {
+						flex: 1;
+						text-align: right;
+						.avatar {
+							img {
+								padding-left: 6px;
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+				.content {
+					padding-top: 6px;
+					.icon {
+						font-size: 12px;
+						line-height: 24px;
+					}
+					.icon.icon-thumb_up {
+						color: #00a0dc;
+					}
+					.icon.icon-thumb_down {
+						color: #93999f;
+					}
+					.text {
+						font-size: 12px;
+						color: #07111b;
+						line-height: 16px;
+						padding-left: 4px;
+					}
+				}
+			}
+		}
+	}
+}
 
 </style>
